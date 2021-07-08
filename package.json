@@ -1,0 +1,26 @@
+{
+  "name": "react-native-demo-yp",
+  "version": "0.1.0",
+  "description": "demo",
+  "main": "index.js",
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": "https://github.com/yen-igaw/react-native-demo-yp",
+  "author": "yen-igaw <yen@igaworks.com> (https://github.com/yen-igaw)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yen-igaw/react-native-demo-yp/issues"
+  },
+  "homepage": "https://github.com/yen-igaw/react-native-demo-yp#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
