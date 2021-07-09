@@ -9,8 +9,9 @@
  AdbrixRmReact.DemmoYP = DemoYp;
  
  const {AdbrixRm} = NativeModules;
- 
- const AdbrixRmCallBack = new NativeEventEmitter(NativeModules.AdbrixRm);
+AdbrixRmReact.native = AdbrixRm;
+
+const AdbrixRmCallBack = new NativeEventEmitter(NativeModules.AdbrixRm);
  
  const AdbrixDeferredDeeplinkEventEmitter = AdbrixRmCallBack.addListener("AdbrixDeferredDeeplinkListener", (deeplink) => {
                                                                          AdbrixRmReact.emit("AdbrixDeferredDeeplinkListener", deeplink);
@@ -115,9 +116,9 @@
  AdbrixRmReact.gdprForgetMe = () => {
      return AdbrixRm.gdprForgetMe();
  }
- AdbrixRmReact.setDeviceId = (deviceId) => {
-     return AdbrixRm.setDeviceId(deviceId)
- }
+//  AdbrixRmReact.setDeviceId = (deviceId) => {
+//      return AdbrixRm.setDeviceId(deviceId)
+//  }
  AdbrixRmReact.setAge = (age) => {
      return AdbrixRm.setAge(age);
  }
@@ -376,6 +377,15 @@
  AdbrixRmReact.UPLOAD_TIME_INTERVAL_MIN = 60;
  AdbrixRmReact.UPLOAD_TIME_INTERVAL_NORMAL = 60;
  AdbrixRmReact.UPLOAD_TIME_INTERVAL_MAX = 120;
+
+ AdbrixRmReact.logTest = (msg) =>{
+    if(Platform.OS === 'ios'){
+        console.log("IOS LOG");
+      }else{
+        console.log("Andoid LOG");
+        AdbrixRm.nativeHongLog("Hello Yen");
+      }
+ }
  
  export default AdbrixRmReact;
  
