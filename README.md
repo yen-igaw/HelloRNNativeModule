@@ -1,6 +1,6 @@
 # react-native-demo-yp
 
-demo
+AdbrixRM Plugin for React Native Test
 
 ## Installation
 
